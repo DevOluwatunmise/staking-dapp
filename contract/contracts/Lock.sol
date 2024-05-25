@@ -10,12 +10,12 @@ contract Lock {
     // bool istrue = false;
 
 
-    uint storeData = x;
-    function setter() {
+    uint storeData;
+    function setter(uint x) public {
         storeData = x;
     }
 
-    function getter() {
-        
+    function getter() public view returns(uint){
+        return storeData;
     }
 }
